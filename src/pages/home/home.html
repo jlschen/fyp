@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      FYP
+      Shortlist
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="background">
+<ion-card>
+    <img src="assets/img/p.jpg" [navPush]="appOnePage">
+    <p><b>Block 2E Ong Sum Ping Condominium</b></p> <h1> $350,000</h1>
+    <button ion-button (click)="remove()" color="danger" outline>Remove</button>
+</ion-card>
+
+<ion-card>
+
+    <img src="assets/img/a.jpg" [navPush]="appTwoPage">
+    <p><b>Tanjung Bunut</b></p> <h1> $290,00 </h1> 
+    <button ion-button color="danger" outline>Remove</button>
+    
+ </ion-card>    
 </ion-content>
+
+
+  
