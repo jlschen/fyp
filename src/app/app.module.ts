@@ -5,25 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { AppPage } from '../pages/app/app';
-import { App2Page } from '../pages/app2/app2';
-import { ChinesePage } from '../pages/chinese/chinese';
-import { Chinese2Page } from '../pages/chinese2/chinese2';
-import { MalayPage } from '../pages/malay/malay';
-import { Malay2Page } from '../pages/malay2/malay2';
-
+import { PropertyServiceProvider } from '../providers/property-service/property-service';
+import { AuthProvider } from '../providers/auth/auth';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    AppPage,
-    App2Page,
-    ChinesePage,
-    Chinese2Page,
-    MalayPage,
-    Malay2Page
   ],
   imports: [
     BrowserModule,
@@ -32,19 +20,14 @@ import { Malay2Page } from '../pages/malay2/malay2';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    AppPage,
-    App2Page,
-    ChinesePage,
-    Chinese2Page,
-    MalayPage,
-    Malay2Page
-
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PropertyServiceProvider,
+    AuthProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
